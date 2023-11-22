@@ -1,0 +1,55 @@
+OWASP 
+
+1. What is OWASP and what is its primary mission as described in the article?
+
+    OWASP är en internationell ideell organisation som ägnar sig åt webbsäkerhet. 
+    Deras huvudsakliga mål att hjälpa ägare till webbplatser och säkerhetsexperter 
+    att skydda webbapplikationer från cyberattacker.
+
+
+
+2. Explain the concept of "Injection". Provide an example of how an injection attack
+could compromise a web application's security.
+
+    En injection-attack inträffar när osäker/skadlig data skickas till en code interpreter (kodläsare?) 
+    via ett webbformulär eller liknande. Till exempel skulle en attack kunna ge en hacker information 
+    som de inte ska ha tillgång till eller tillåta hen att manipulera datan så att applikationen inte 
+    går att använda som vanligt.
+
+
+
+3. Explain two strategies to prevent Broken Authentication vulnerabilities.
+
+    Två strategier som används för att förhindra Broken Authentication är tvåfaktorsautentisering 
+    (2-Step verification) samt att begränsa/fördröja upprepade inloggningsförsök med hjälp av 
+    "rate limiting".
+
+
+
+4. Describe the potential consequences of Insecure Deserialization in web applications. 
+How can developers protect against such attacks?
+
+    Insecure Deserialization kan resultera i så kallade DDoS- eller RCE-attacker.
+
+    DDoS = Distributed Denial-Of-Service (överbelastningsattack)
+    RCE = Remote Code Execution (skadlig kod som fjärrkörs/tillåter fjärrstyrning)
+
+    Sätt att skydda sig från sådana attacker kan vara att övervaka deserialisering och
+    implementera type checks. Det säkraste sättet att skydda sig mot osäkra deserialiseringsattacker 
+    att förbjuda deserialisering av data från opålitliga källor.
+
+    Type check = en valideringsmetod som kontrollerar att inmatad data är av förväntad typ
+
+
+
+5. Briefly define Cross-Site Scripting (XSS) as outlined in the article and list two methods
+suggested in the article to prevent XSS attacks in web applications.
+
+    Cross-Site Scripting kan ske när webbapplikationer tillåter användare att skriva egen kod i en 
+    url-sökväg eller på en webbsida som kan ses av andra. Målet med en attack är inte 
+    webbservern, utan dess användare.
+    
+    Stategier för att förhindra XSS kan till exempel vara att neka opålitliga HTTP-förfrågningar
+    samt att validera och sanera användergenererat innehåll.
+
+    Användning av moderna rambverk som t ex ReactJS och Ruby on Rails kan även ge visst inbyggt skydd.
